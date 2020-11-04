@@ -12,10 +12,7 @@ import java.util.stream.IntStream;
  */
 
 public class ConditionalStatements {
-
-    public static void main(String[] args) {
-        getBeaufortScale();
-    }
+    
     // Basics
 
     /**
@@ -36,7 +33,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1a"
-     * <p>
+     * 
      * 1. Get two integers from console.
      * 2. Print them in ascending order. If both are equal, print only one of them.
      */
@@ -49,7 +46,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1b"
-     * <p>
+     * 
      * 1. Get three integers from console.
      * 2. Print the greatest of them.
      */
@@ -63,7 +60,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1c"
-     * <p>
+     * 
      * 1. Get three integers from console.
      * 2. Print the smallest of them.
      */
@@ -77,7 +74,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1d"
-     * <p>
+     * 
      * 1. Get three integers from console.
      * 2. Print unique numbers.
      */
@@ -88,7 +85,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1e"
-     * <p>
+     * 
      * 1. Get one integer from console.
      * 2. Check if given year is a leap year.
      */
@@ -100,7 +97,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1f"
-     * <p>
+     * 
      * 1. Get two integers from console.
      * 2. Subtract smaller one from the greater one.
      */
@@ -111,7 +108,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1g"
-     * <p>
+     * 
      * 1. Get two integers from console.
      * 2. Subtract one from another using their absolute values.
      */
@@ -122,7 +119,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1h"
-     * <p>
+     * 
      * 1. Get three integers from console.
      * 2. Print them in ascending order.
      */
@@ -135,7 +132,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1i"
-     * <p>
+     * 
      * 1. Get two integers from console (month, date)
      * 2. Check if given date is correct.
      */
@@ -158,7 +155,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1j"
-     * <p>
+     * 
      * 1. Get three integers from console.
      * 2. Print median of these three numbers.
      */
@@ -169,7 +166,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1k"
-     * <p>
+     * 
      * 1. Get two integers from console.
      * 2. Print random number greater than first number but smaller than the second one.
      */
@@ -181,7 +178,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1l"
-     * <p>
+     * 
      * 1. Get integer from console (minutes).
      * 2. Print how many hours and minutes it is.
      */
@@ -194,7 +191,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1m"
-     * <p>
+     * 
      * 1. Get three integers from console (minutes).
      * 2. Print sum of integers formatted as HH:MM.
      */
@@ -209,7 +206,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 1n"
-     * <p>
+     * 
      * 1. Get two integers from console (date, month).
      * 2. Print which season it is.
      */
@@ -251,7 +248,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 2a"
-     * <p>
+     * 
      * 1. Generate 3 random number (1-6 range).
      * 2. Check for duplicates
      */
@@ -264,7 +261,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 2b"
-     * <p>
+     * 
      * 1. Self-explanatory I guess haha
      */
     public static void whatDoesTheFortuneCookieSay() {
@@ -282,7 +279,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 2c"
-     * <p>
+     * 
      * 1. Generate 3 random numbers (0-1 range).
      * 2. Check if triangle with the given sides exists.
      */
@@ -301,7 +298,7 @@ public class ConditionalStatements {
     // Geometry
     /**
      * Assignment "Conditional Statements - 2c"
-     * <p>
+     * 
      * 1. Generate 3 random numbers (0-1 range).
      * 2. Check if triangle with the given sides exists.
      */
@@ -321,7 +318,7 @@ public class ConditionalStatements {
 
     /**
      * Assignment "Conditional Statements - 4a"
-     * <p>
+     * 
      * 1. Get 1 integer from console (speed in km/h).
      * 2. Print corresponding Beaufort scale no, wind name & conditions
      */
@@ -336,6 +333,11 @@ public class ConditionalStatements {
             this.windName = windName;
             this.landConditions = landConditions;
             this.seaConditions = seaConditions;
+        }
+        void printInfo(){
+            System.out.println("Wind name: " + this.windName);
+            System.out.println("Sea conditions: " + this.seaConditions);
+            System.out.println("Land conditions: " + this.landConditions);
         }
     }
 
@@ -433,9 +435,7 @@ public class ConditionalStatements {
             BeaufortScaleEntry entry = scale[i];
             if (speed <= entry.maxSpeed) {
                 System.out.println("Beaufort scale: " + i);
-                System.out.println("Wind name: " + entry.windName);
-                System.out.println("Sea conditions: " + entry.seaConditions);
-                System.out.println("Land conditions: " + entry.landConditions);
+                entry.printInfo();
                 break;
             }
         }
