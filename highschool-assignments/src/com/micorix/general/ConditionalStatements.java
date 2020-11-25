@@ -12,7 +12,9 @@ import java.util.stream.IntStream;
  */
 
 public class ConditionalStatements {
-    
+    public static void main(String[] args) {
+        loopExample();
+    }
     // Basics
 
     /**
@@ -466,5 +468,9 @@ public class ConditionalStatements {
                 desc = "Obese";
             }
             System.out.println(desc);
+        }
+
+        static void loopExample(){
+            System.out.println(Arrays.stream(new int[5]).map(item -> new Scanner(System.in).nextInt()).sum());
         }
     }
