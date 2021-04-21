@@ -9,7 +9,7 @@ public class Root {
 
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        double n = sc.nextDouble();
 
         double x = estimateRoot(n);
 
@@ -19,7 +19,7 @@ public class Root {
 
         System.out.println(x);
     }
-    public static int estimateRoot(int n) {
+    public static double estimateRoot(double n) {
         return n/2;
     }
 }
